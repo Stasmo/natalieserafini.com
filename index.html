@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NATALIE SERAFINI</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <style type="text/css">
+        body, html {
+            height: 80%;
+        }
+        body {
+            font-family: 'Indie Flower', cursive;
+            font-size: 4em;
+            background-image: url("img/nat2.jpg");
+            background-size: 200px 130px;
+            background-repeat: repeat;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">Hello MY NAME is Natalie Serafini</div>
+    <div style="text-align: center;">
+        <img class="smile" style="cursor: pointer; margin-top: 10%;" src="img/smile.jpg">
+        <img class="frown" style="margin-top: 10%;" src="img/frown.jpg">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $('.frown').hide()
+        var audioElement = document.createElement('audio');
+        audioElement.setAttribute('src', 'sounds/horn.mp3');
+
+        $('.smile').click(function(){
+            $(this).hide()
+            $('.frown').show()
+            audioElement.play()
+            setTimeout(function(){
+                $('.frown').hide()
+                $('.smile').show()
+            }, 5000)
+        })
+    </script>
+</body>
+</html>
